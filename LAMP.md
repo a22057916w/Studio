@@ -13,8 +13,10 @@ Apache configuration files are located in `/etc/httpd/conf`. The main configurat
 To start Apache, start `httpd.service` using [systemd](https://wiki.archlinux.org/title/Systemd#Using_units). 
 
 ## Reference
+* [Apache HTTP Server - ArchWiki](https://wiki.archlinux.org/title/Apache_HTTP_Server#PHP)
+* [PHP - ArchWiki](https://wiki.archlinux.org/title/PHP#Installation)
+* [MariaDB - ArchWiki](https://wiki.archlinux.org/title/MariaDB)
+* [phpMyAdmin - ArchWiki](https://wiki.archlinux.org/title/PhpMyAdmin)
 * [Instalar PHPMyAdmin Manjaro (Install phpmyadmin in arch linux) - YouTube](https://www.youtube.com/watch?v=a4tXdznN5YE)
 * [Arch Linux: The LAMP stack - YouTube](https://www.youtube.com/watch?v=GYnmm97bPxg)
-* [Apache HTTP Server - ArchWiki](https://wiki.archlinux.org/title/Apache_HTTP_Server#PHP)
-* [phpMyAdmin - ArchWiki](https://wiki.archlinux.org/title/PhpMyAdmin)
 * [Linux安裝php和關於架網站 - iT 邦幫忙::一起幫忙解決難題，拯救 IT 人的一天](https://ithelp.ithome.com.tw/articles/10208287?sc=iThelpR)
