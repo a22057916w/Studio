@@ -6,6 +6,9 @@ Install the [apache](https://archlinux.org/packages/?name=apache) package.
 ```
 pacman -S apache
 ```
+Apache configuration files are located in `/etc/httpd/conf`. The main configuration file is `/etc/httpd/conf/httpd.conf`, which includes various other configuration files. The default configuration file should be fine for a simple setup. By default, it will serve the directory `/srv/http` to anyone who visits your website.
+
+To start Apache, start `httpd.service` using [systemd](https://wiki.archlinux.org/title/Systemd#Using_units). 
 
 ## Reference
 * [Instalar PHPMyAdmin Manjaro (Install phpmyadmin in arch linux) - YouTube](https://www.youtube.com/watch?v=a4tXdznN5YE)
