@@ -8,6 +8,8 @@ pacman -S apache
 ```
 Apache configuration files are located in `/etc/httpd/conf`. The main configuration file is `/etc/httpd/conf/httpd.conf`, which includes various other configuration files. The default configuration file should be fine for a simple setup. By default, it will serve the directory `/srv/http` to anyone who visits your website.
 
+![](https://github.com/a22057916w/Studio/blob/1.0/.meta/LAMP/srv_http.png)
+
 To start Apache, start `httpd.service` using [systemd](https://wiki.archlinux.org/title/Systemd#Using_units). 
 
 ## Reference
