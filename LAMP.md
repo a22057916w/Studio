@@ -12,6 +12,19 @@ Apache configuration files are located in `/etc/httpd/conf`. The main configurat
 
 To start Apache, start `httpd.service` using [systemd](https://wiki.archlinux.org/title/Systemd#Using_units). 
 
+## PHP
+First [install PHP](https://wiki.archlinux.org/title/PHP#Installation)
+```
+pacman -S php 
+```
+### Using libphp
+It is suitable for a light request load. It also requires you to change the **mpm** module, which may cause problems with other extensions (e.g. it is not compatible with #HTTP/2).
+
+Install `php7-apache` for PHP 7 or `php-apache`
+```
+pacman -S php-apache
+```
+
 ## Reference
 * [Apache HTTP Server - ArchWiki](https://wiki.archlinux.org/title/Apache_HTTP_Server#PHP)
 * [PHP - ArchWiki](https://wiki.archlinux.org/title/PHP#Installation)
