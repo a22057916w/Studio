@@ -10,6 +10,11 @@ Apache configuration files are located in `/etc/httpd/conf`. The main configurat
 
 ![](https://github.com/a22057916w/Studio/blob/1.0/.meta/LAMP/srv_http.png)
 
+Search and comment out the following line in `/etc/httpd/conf/httpd.conf`:
+```
+#LoadModule unique_id_module modules/mod_unique_id.so
+```
+
 To start Apache, start `httpd.service` using [systemd](https://wiki.archlinux.org/title/Systemd#Using_units). 
 
 ## PHP
@@ -60,6 +65,12 @@ extension=pdo_mysql
 extension=mysqli
 ```
 **Note**: extension=mysql was removed in PHP 7.0.
+
+## MySQL/MariaDB
+[MariaDB](https://mariadb.com/) is a reliable, high performance and full-featured database server which aims to be an 'always Free, backward compatible, drop-in' replacement of [MySQL](https://wiki.archlinux.org/title/MySQL). Since 2013 MariaDB is Arch Linux's default implementation of MySQL.
+```
+pacman -S mariadb mariadb-clients mariadb-lib
+```
 
 ## Reference
 * [Apache HTTP Server - ArchWiki](https://wiki.archlinux.org/title/Apache_HTTP_Server#PHP)
