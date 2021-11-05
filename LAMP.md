@@ -116,6 +116,25 @@ By default, MySQL will listen on the 0.0.0.0 address, which includes all network
 bind-address = 127.0.0.1
 ```
 ## phpMyAdmin
+Install the [phpmyadmin](https://archlinux.org/packages/community/any/phpmyadmin/) package. 
+```
+pacman -S phpmyadmin
+```
+### Running
+#### PHP
+Make sure the PHP mariadb and `iconv` extension(s) have been enabled.
+
+Optionally you can enable `extension=bz2` and `extension=zip` for compression support. 
+
+Uncomment the following lines in `/etc/php/php.ini`:
+```
+extension=iconv
+extension=bz2
+extension=mysqli
+```
+#### Apache
+Create the Apache configuration file `/etc/httpd/conf/extra/phpmyadmin.conf` as follow: 
+
 
 ## Reference
 * [Apache HTTP Server - ArchWiki](https://wiki.archlinux.org/title/Apache_HTTP_Server#PHP)
