@@ -24,6 +24,19 @@ Install `php7-apache` for PHP 7 or `php-apache`
 ```
 pacman -S php-apache
 ```
+In `/etc/httpd/conf/httpd.conf`, comment the line:
+```
+#LoadModule mpm_event_module modules/mod_mpm_event.so
+```
+and uncomment the line:
+```
+LoadModule mpm_prefork_module modules/mod_mpm_prefork.so
+```
+**Note**: The above is required, because libphp.so included with the package does not work with mod_mpm_event, but will only work mod_mpm_prefork instead.
+
+To enable PHP, add these lines to `/etc/httpd/conf/httpd.conf`: 
+
+![](https://github.com/a22057916w/Studio/blob/1.0/.meta/LAMP/php_extension.png)
 
 ## Reference
 * [Apache HTTP Server - ArchWiki](https://wiki.archlinux.org/title/Apache_HTTP_Server#PHP)
