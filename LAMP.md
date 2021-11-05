@@ -18,7 +18,7 @@ To start Apache, start `httpd.service` using [systemd](https://wiki.archlinux.or
 pacman -S php 
 ```
 #### Using libphp
-It is suitable for a light request load. It also requires you to change the **mpm module** **(Multi-Processing Module)**, which may cause problems with other extensions (e.g. it is not compatible with #HTTP/2).
+It is suitable for a light request load. It also requires you to change the **mpm module** [**(Multi-Processing Module)**](https://dotblogs.com.tw/grayyin/2020/03/15/115350), which may cause problems with other extensions (e.g. it is not compatible with #HTTP/2).
 
 Install `php7-apache` for PHP 7 or `php-apache`
 ```
