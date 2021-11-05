@@ -52,7 +52,7 @@ For [php-gd](https://archlinux.org/packages/?name=php-gd) uncomment the line in 
 extension=gd
 ```
 #### MySQL/MariaDB
-Install and configure MySQL/MariaDB as described in [MariaDB](https://wiki.archlinux.org/title/MariaDB) or following the tutorial below.
+Install and configure MySQL/MariaDB as described in [MariaDB](https://wiki.archlinux.org/title/MariaDB) or refer to the tutorial in next section.
 
 Uncomment the following lines in `/etc/php/php.ini`:
 ```
