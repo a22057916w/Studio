@@ -17,7 +17,7 @@ First [install PHP](https://wiki.archlinux.org/title/PHP#Installation)
 ```
 pacman -S php 
 ```
-### Using libphp
+#### Using libphp
 It is suitable for a light request load. It also requires you to change the **mpm** module, which may cause problems with other extensions (e.g. it is not compatible with #HTTP/2).
 
 Install `php7-apache` for PHP 7 or `php-apache`
