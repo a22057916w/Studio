@@ -135,6 +135,11 @@ extension=mysqli
 #### Apache
 Create the Apache configuration file `/etc/httpd/conf/extra/phpmyadmin.conf` as follow: 
 
+![](https://github.com/a22057916w/Studio/blob/1.0/.meta/LAMP/php_extension.png)
+
+And include it in `/etc/httpd/conf/httpd.conf`:
+
+![]()
 
 ## Reference
 * [Apache HTTP Server - ArchWiki](https://wiki.archlinux.org/title/Apache_HTTP_Server#PHP)
