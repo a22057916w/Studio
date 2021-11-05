@@ -43,7 +43,7 @@ Restart `httpd.service`.
 ```
 systemctl restart httpd
 ```
-### [gd](https://tw511.com/a/01/28847.html)
+#### [gd](https://tw511.com/a/01/28847.html)
 ```
 pacman -S php-gd
 ```
@@ -51,8 +51,8 @@ For [php-gd](https://archlinux.org/packages/?name=php-gd) uncomment the line in 
 ```
 extension=gd
 ```
-### MySQL/MariaDB
-Install and configure MySQL/MariaDB as described in [MariaDB](https://wiki.archlinux.org/title/MariaDB).
+#### MySQL/MariaDB
+Install and configure MySQL/MariaDB as described in [MariaDB](https://wiki.archlinux.org/title/MariaDB) or following the tutorial below.
 
 Uncomment the following lines in `/etc/php/php.ini`:
 ```
