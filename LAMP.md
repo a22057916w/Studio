@@ -139,13 +139,17 @@ Create the Apache configuration file `/etc/httpd/conf/extra/phpmyadmin.conf` as 
 
 And include it in `/etc/httpd/conf/httpd.conf`:
 
-![]()
+![](https://github.com/a22057916w/Studio/blob/1.0/.meta/LAMP/include_phpadmin_conf.png)
+
+Save and close the file. Restart httpd service.
+```
+systemctl restart httpd
+```
 
 ## Reference
 * [Apache HTTP Server - ArchWiki](https://wiki.archlinux.org/title/Apache_HTTP_Server#PHP)
 * [PHP - ArchWiki](https://wiki.archlinux.org/title/PHP#Installation)
 * [MariaDB - ArchWiki](https://wiki.archlinux.org/title/MariaDB)
 * [phpMyAdmin - ArchWiki](https://wiki.archlinux.org/title/PhpMyAdmin)
-* [Instalar PHPMyAdmin Manjaro (Install phpmyadmin in arch linux) - YouTube](https://www.youtube.com/watch?v=a4tXdznN5YE)
 * [Arch Linux: The LAMP stack - YouTube](https://www.youtube.com/watch?v=GYnmm97bPxg)
-* [Linux安裝php和關於架網站 - iT 邦幫忙::一起幫忙解決難題，拯救 IT 人的一天](https://ithelp.ithome.com.tw/articles/10208287?sc=iThelpR)
+* [Install Apache, MariaDB, PHP (LAMP) stack on Arch Linux - OSTechNix](https://ostechnix.com/install-apache-mariadb-php-lamp-stack-on-arch-linux-2016/)
