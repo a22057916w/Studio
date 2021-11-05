@@ -68,8 +68,52 @@ extension=mysqli
 
 ## MySQL/MariaDB
 [MariaDB](https://mariadb.com/) is a reliable, high performance and full-featured database server which aims to be an 'always Free, backward compatible, drop-in' replacement of [MySQL](https://wiki.archlinux.org/title/MySQL). Since 2013 MariaDB is Arch Linux's default implementation of MySQL.
+
+MariaDB is the [default implementation](https://archlinux.org/news/mariadb-replaces-mysql-in-repositories/) of MySQL in Arch Linux, provided with the [mariadb](https://archlinux.org/packages/extra/x86_64/mariadb/) package. 
 ```
-pacman -S mariadb mariadb-clients mariadb-lib
+systemctl stop mysqld
+pacman -S mariadb libmariadbclient mariadb-clients
+systemctl start mysqld
+mysql_upgrade -p
+
+```
+
+Run the following command before starting the `mariadb.service` or `mysqld`
+```
+mariadb-install-db --user=mysql --basedir=/usr --datadir=/var/lib/mysql
+```
+### Configuration
+Once you have started the MySQL server and added a root account, you may want to change the default configuration.
+
+To log in as `root` on the MySQL server, use the following command: 
+```
+mysql -u root -p
+```
+#### Add user
+Creating a new user takes two steps: create the user; grant privileges. In the below example, the user monty with some_pass as password is being created, then granted full permissions to the database mydb: 
+```
+# mysql -u root -p
+
+MariaDB> CREATE USER 'monty'@'localhost' IDENTIFIED BY 'some_pass';
+MariaDB> GRANT ALL PRIVILEGES ON mydb.* TO 'monty'@'localhost';
+MariaDB> FLUSH PRIVILEGES;
+MariaDB> quit
+
+```
+### Security
+#### Improve initial security
+The `mysql_secure_installation` command will interactively guide you through a number of recommended security measures, such as removing anonymous accounts and removing the test database:
+```
+mysql_secure_installation
+```
+
+**Warning**: After running this, please note that TCP port 3306 will still be open, but refusing connections with an error message. To prevent MySQL from listening on an external interface, see the #Listen only on the loopback address and [#Enable access locally only via Unix sockets sections](https://wiki.archlinux.org/title/MariaDB#Enable_access_locally_only_via_Unix_sockets).
+
+#### Listen only on the loopback address
+By default, MySQL will listen on the 0.0.0.0 address, which includes all network interfaces. In order to restrict MySQL to listen only to the loopback address, add the following line in `/etc/my.cnf.d/server.cnf`:
+```
+[mysqld]
+bind-address = 127.0.0.1
 ```
 
 ## Reference
