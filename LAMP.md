@@ -43,6 +43,24 @@ Restart `httpd.service`.
 ```
 systemctl restart httpd
 ```
+### [gd](https://tw511.com/a/01/28847.html)
+```
+pacman -S php-gd
+```
+For [php-gd](https://archlinux.org/packages/?name=php-gd) uncomment the line in `/etc/php/php.ini`: 
+```
+extension=gd
+```
+### MySQL/MariaDB
+Install and configure MySQL/MariaDB as described in [MariaDB](https://wiki.archlinux.org/title/MariaDB).
+
+Uncomment the following lines in `/etc/php/php.ini`:
+```
+extension=pdo_mysql
+extension=mysqli
+```
+**Note**: extension=mysql was removed in PHP 7.0.
+
 ## Reference
 * [Apache HTTP Server - ArchWiki](https://wiki.archlinux.org/title/Apache_HTTP_Server#PHP)
 * [PHP - ArchWiki](https://wiki.archlinux.org/title/PHP#Installation)
