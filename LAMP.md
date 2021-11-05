@@ -107,7 +107,7 @@ The `mysql_secure_installation` command will interactively guide you through a n
 mysql_secure_installation
 ```
 
-**Warning**: After running this, please note that TCP port 3306 will still be open, but refusing connections with an error message. To prevent MySQL from listening on an external interface, see the #Listen only on the loopback address and [#Enable access locally only via Unix sockets sections](https://wiki.archlinux.org/title/MariaDB#Enable_access_locally_only_via_Unix_sockets).
+*Warning*: After running this, please note that TCP port 3306 will still be open, but refusing connections with an error message. To prevent MySQL from listening on an external interface, see the [#Listen only on the loopback address](https://wiki.archlinux.org/title/MariaDB#Listen_only_on_the_loopback_address) and [#Enable access locally only via Unix sockets sections](https://wiki.archlinux.org/title/MariaDB#Enable_access_locally_only_via_Unix_sockets).
 
 #### Listen only on the loopback address
 By default, MySQL will listen on the 0.0.0.0 address, which includes all network interfaces. In order to restrict MySQL to listen only to the loopback address, add the following line in `/etc/my.cnf.d/server.cnf`:
