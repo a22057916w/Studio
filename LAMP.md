@@ -38,6 +38,10 @@ To enable PHP, add these lines to `/etc/httpd/conf/httpd.conf`:
 
 ![](https://github.com/a22057916w/Studio/blob/1.0/.meta/LAMP/php_extension.png)
 
+Restart `httpd.service`. 
+```
+systemctl restart httpd
+```
 ## Reference
 * [Apache HTTP Server - ArchWiki](https://wiki.archlinux.org/title/Apache_HTTP_Server#PHP)
 * [PHP - ArchWiki](https://wiki.archlinux.org/title/PHP#Installation)
